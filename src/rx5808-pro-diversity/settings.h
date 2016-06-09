@@ -44,6 +44,7 @@ SOFTWARE.
 
 // Feature Togglels
 #define USE_DIVERSITY
+#define USE_TRACKER
 #define USE_IR_EMITTER
 //#define USE_FLIP_SCREEN
 #define USE_BOOT_LOGO
@@ -77,6 +78,23 @@ SOFTWARE.
     // this pervents rapid switching.
     // 1 to 10 is a good range. 1 being fast switching, 10 being slow 100ms to switch.
     #define DIVERSITY_MAX_CHECKS 5
+#endif
+
+#ifdef USE_TRACKER
+    // antenna Tracker
+    #define receiverB_led A1
+    #define rssiPinB A7
+    #define useReceiverAuto 0
+    #define useReceiverB 2
+	// change then speed of the stepper motor
+	#define RPM_MOTOR 5
+	#define MOTOR_PIN_1 5
+	#define MOTOR_PIN_2 7
+	#define MOTOR_PIN_3 8
+	#define MOTOR_PIN_4 9
+	// change this to fit the number of steps per revolution for your motor
+	#define STEP_PER_REVOLUTION_MOTOR 513
+   // TBD
 #endif
 
 // this two are minimum required
