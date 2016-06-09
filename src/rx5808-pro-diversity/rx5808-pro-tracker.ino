@@ -8,6 +8,7 @@
  * Diversity Receiver Mode and GUI improvements by Shea Ivey
  * OLED Version by Shea Ivey
  * Seperating display concerns by Shea Ivey
+ * Antenna tracking funtionality by Emiliano Macedonio
 
 The MIT License (MIT)
 
