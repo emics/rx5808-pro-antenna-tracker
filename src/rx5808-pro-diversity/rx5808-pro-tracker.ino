@@ -62,6 +62,9 @@ SOFTWARE.
 #include "screens.h"
 screens drawScreen;
 
+//library for stepper motor
+#include "Stepper.h"
+
 // Channels to sent to the SPI registers
 const uint16_t channelTable[] PROGMEM = {
   // Channel 1 - 8
@@ -142,6 +145,7 @@ uint8_t rssi_setup_run=0;
 char call_sign[10];
 bool settings_beeps = true;
 bool settings_orderby_channel = true;
+Stepper myStepper(STEP_PER_REVOLUTION_MOTOR, MOTOR_PIN_1, MOTOR_PIN_2, MOTOR_PIN_3, MOTOR_PIN_4);
 
 // SETUP ----------------------------------------------------------------------------
 void setup()
@@ -208,6 +212,7 @@ void setup()
         EEPROM.write(EEPROM_ADR_RSSI_MAX_B_L,lowByte(RSSI_MAX_VAL));
         EEPROM.write(EEPROM_ADR_RSSI_MAX_B_H,highByte(RSSI_MAX_VAL));
 #endif
+		stepper.setSpeed(RPM_MOTOR);
     }
 
     // read last setting from eeprom
@@ -1231,4 +1236,13 @@ void SERIAL_ENABLE_HIGH()
   delayMicroseconds(1);
   digitalWrite(slaveSelectPin, HIGH);
   delayMicroseconds(1);
+}
+
+void TURN_MOTOR(int step, bool toRight)
+{
+  if (!direction)
+  {
+	  step = -step;
+  }
+  myStepper.step(step);
 }
