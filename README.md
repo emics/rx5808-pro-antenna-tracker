@@ -1,18 +1,11 @@
 #Introduction
-The main goal of this project is to add diversity to an already amazing feature set. Please see the following video for a quick intro of the project.
+The main goal of this project is to transform a diversity project into an antenna tracker.
 
-[![Video](http://img.youtube.com/vi/NwnQCUikqvI/0.jpg)](http://www.youtube.com/watch?v=NwnQCUikqvI)
+This project originated [here](https://github.com/sheaivey/rx5808-pro-diversity) and has been modified to realize an antenna tracker.
 
-The code is also now backward compatible with the original rx5808-pro schematic minus diversity and dip switch mode. For details on updating click [here](/docs/diy-arduino-nano.md).
+The text below this line is unmodified.
 
-This project originated [here](https://code.google.com/p/rx5808-pro/) and has been modified to include diversity receiver menu.
-
-## Donations Welcome!
-**Help fund more research and development into these great open source projects.**
-
-[![Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GE83PG4KBZ5NJ)
-
-Donations help show the developer your appreciation for all their hard work. A little goes a long way whether it is used for new hardware samples or better test equipment, you can be sure it will be put to good use.
+======================================
 
 ## Table of Contents
 1. [Features](#features)
